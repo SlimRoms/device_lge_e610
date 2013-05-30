@@ -1,0 +1,2 @@
+add_lunch_combo cm_e610-eng
+add_lunch_combo cm_e610-userdebug

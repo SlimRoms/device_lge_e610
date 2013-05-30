@@ -7,9 +7,13 @@ $(call inherit-product-if-exists, vendor/lge/e610/e610-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/e610/overlay
 
-$(call inherit-product, $(LOCAL_PATH)/mdpi-dalvik.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
-PRODUCT_AAPT_CONFIG := normal mdpi
+# We have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+PRODUCT_AAPT_CONFIG := normal mdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.m4.rc:root/init.m4.rc \
@@ -30,6 +34,7 @@ PRODUCT_COPY_FILES += \
 # HW HALS
 PRODUCT_PACKAGES += \
     gps.e610
+
 
 PRODUCT_NAME := full_e610
 PRODUCT_DEVICE := e610
