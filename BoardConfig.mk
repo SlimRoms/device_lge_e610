@@ -10,5 +10,6 @@ TARGET_KERNEL_CONFIG := cyanogenmod_m4_defconfig
 TARGET_PREBUILT_KERNEL := device/lge/e610/kernel
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := e610
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/p350/bluetooth
 
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/e610/recovery/graphics.c
