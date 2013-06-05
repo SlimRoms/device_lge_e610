@@ -16,6 +16,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.m4.rc:root/init.m4.rc \
     $(LOCAL_PATH)/ueventd.m4.rc:root/ueventd.m4.rc
 
+# BT startup
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/m4_keypad.kl:system/usr/keylayout/m4_keypad.kl \
     $(LOCAL_PATH)/configs/touch_mcs8000.idc:system/usr/idc/touch_mcs8000.idc \
