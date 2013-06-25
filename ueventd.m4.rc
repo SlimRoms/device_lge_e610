@@ -147,30 +147,38 @@
 /sys/devices/virtual/input/input*   enable      0660  root   input
 /sys/devices/virtual/input/input*   poll_delay  0660  root   input
 #permissions for video
-/dev/msm_vidc_reg         0660  system       audio
-/dev/msm_vidc_dec         0660  system       audio
-/dev/msm_vidc_dec_sec     0660  system       audio
-/dev/msm_vidc_enc         0660  system       audio
+/dev/msm_vidc_reg         0660   system     audio
+/dev/msm_vidc_dec         0660   system     audio
+/dev/msm_vidc_dec_sec     0660   system     audio
+/dev/msm_vidc_enc         0660   system     audio
 #permissions for audio
-/dev/msm_amrnb            0660  system       audio
-/dev/msm_amrwb            0660  system       audio
-/dev/msm_aac              0660  system       audio
-/dev/msm_multi_aac        0660  system       audio
-/dev/msm_aac_in           0660  system       audio
-/dev/msm_qcelp            0660  system       audio
-/dev/msm_evrc             0660  system       audio
-/dev/msm_fm               0660  system       audio
-/dev/msm_acdb             0660  system       audio
-/dev/msm_rtac             0660  system       audio
-/dev/msm_wma              0660  system       audio
-/dev/msm_wmapro           0660  system       audio
-/dev/msm_qcelp_in         0660  system       audio
-/dev/msm_evrc_in          0660  system       audio
-/dev/msm_preproc_ctl      0660  system       audio
-/dev/msm_a2dp_in          0640  system       audio
-/dev/msm_amrnb_in         0640  system       audio
+/dev/msm_qcelp            0660   system     audio
+/dev/msm_evrc             0660   system     audio
+/dev/msm_wma              0660   system     audio
+/dev/msm_wmapro           0660   system     audio
+/dev/msm_amrnb            0660   system     audio
+/dev/msm_amrwb            0660   system     audio
+/dev/msm_amrwbplus        0660   system     audio
+/dev/msm_aac              0660   system     audio
+/dev/msm_multi_aac        0660   system     audio
+/dev/msm_aac_in           0660   system     audio
+/dev/msm_qcelp_in         0660   system     audio
+/dev/msm_evrc_in          0660   system     audio
+/dev/msm_amrnb_in         0640   system     audio
+/dev/msm_a2dp_in          0660   system     audio
+/dev/msm_ac3              0660   system     audio
+/dev/msm_acdb             0660   system     audio
+/dev/msm_cad              0660   system     audio
+/dev/msm_fm               0660   system     audio
+/dev/msm_mvs              0660   system     audio
+/dev/msm_pcm_lp_dec       0660   system     audio
+/dev/msm_preproc_ctl      0660   system     audio
+/dev/msm_rtac             0660   system     audio
+/dev/msm_voicememo        0660   system     audio
+/dev/radio0               0640   fm_radio   fm_radio
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
+/dev/i2c-5                0660   media       media
 #permissions for sensors
 /dev/msm_dsps             0660  system       system
 #LGE_CHANGE_S : secure clock
