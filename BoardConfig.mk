@@ -1,5 +1,7 @@
 include device/lge/msm7x27a-common/BoardConfigCommon.mk
 
+LGE_PROJECT := l
+
 # inherit from the proprietary version
 -include vendor/lge/e610/BoardConfigVendor.mk
 TARGET_BOOTLOADER_BOARD_NAME := e610
