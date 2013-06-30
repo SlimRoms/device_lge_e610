@@ -28,11 +28,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
-# HW HALS
-PRODUCT_PACKAGES += \
-    gps.e610
-
-
 PRODUCT_NAME := full_e610
 PRODUCT_DEVICE := e610
 PRODUCT_MODEL := LG-E610
