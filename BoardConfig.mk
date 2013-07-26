@@ -10,8 +10,6 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=m4 lge.signed_image=false
 
 TARGET_KERNEL_CONFIG := cyanogenmod_m4_defconfig
 
-TARGET_USES_JELLYBEAN_BASEBAND := true
-
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/e610/bluetooth
 
 BOARD_CUSTOM_GRAPHICS := ../../../device/lge/e610/recovery/graphics.c
