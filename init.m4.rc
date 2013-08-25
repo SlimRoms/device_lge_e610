@@ -2,6 +2,7 @@ import init.lge-shared.rc
 
 on fs
     mount_all fstab.m4
+    setprop ro.crypto.fuse_sdcard true
 
 on boot
     chown system system /sys/class/input/input3/range
