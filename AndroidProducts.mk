@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/e610.mk
+    $(LOCAL_DIR)/full_e610.mk
