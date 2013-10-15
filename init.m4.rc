@@ -4,7 +4,30 @@ on fs
     mount_all fstab.m4
     setprop ro.crypto.fuse_sdcard true
 
+on early-boot
+ # LGE_CHANGE_S  : ATCMD_GKPD 2011-12-28,[myunghwan.kim@lge.com]
+ # M4 device event permission has been changed 
+    chmod 0777 /dev/input/event0
+    chmod 0777 /dev/input/event5
+    chmod 0777 /dev/input/event3
+ # LGE_CHANGE_E : ATCMD_GKPD
+
 on boot
+    chown system system /sys/class/input/input2/range
+    chown system system /sys/class/input/input2/bandwidth
+    chown system system /sys/class/input/input2/mode
+    chown system system /sys/class/input/input2/value
+    chown system system /sys/class/input/input2/delay
+    chown system system /sys/class/input/input2/update
+    chown system system /sys/class/input/input2/selftest
+    chown system system /sys/class/input/input2/offset_filt_x
+    chown system system /sys/class/input/input2/offset_filt_y
+    chown system system /sys/class/input/input2/offset_filt_z
+    chown system system /sys/class/input/input2/fast_calibration_x
+    chown system system /sys/class/input/input2/fast_calibration_y
+    chown system system /sys/class/input/input2/fast_calibration_z
+    chown system system /sys/class/input/input2/eeprom_writing
+    chown system system /sys/class/input/input2/softreset
     chown system system /sys/class/input/input3/range
     chown system system /sys/class/input/input3/bandwidth
     chown system system /sys/class/input/input3/mode
@@ -22,13 +45,11 @@ on boot
     chown system system /sys/class/input/input3/softreset
     chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
 
-on post-fs-data
-    ## Sensors daemon stuff
-    mkdir /data/misc/sens 2755 system compass
+# Proxi sensor //eee3114.lee@lge.com
+    chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
+    chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
 
-service sensord /system/bin/sensord
-    user system
-    group compass misc input
-    class core
-    oneshot
+service sensord /system/bin/sensord  
+    class late_start
+        oneshot 
 
