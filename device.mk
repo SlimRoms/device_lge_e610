@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,6 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# This file includes all definitions that apply to ALL e610 devices, and
+# are also specific to e610 devices
+#
+# Everything in this directory will become public
 
 $(call inherit-product, device/lge/msm7x27a-common/msm7x27a-common.mk)
 
