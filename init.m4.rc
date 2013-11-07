@@ -2,7 +2,6 @@ import init.lge-shared.rc
 
 on fs
     mount_all fstab.m4
-    setprop ro.crypto.fuse_sdcard true
 
 on early-boot
  # LGE_CHANGE_S  : ATCMD_GKPD 2011-12-28,[myunghwan.kim@lge.com]

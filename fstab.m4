@@ -20,5 +20,5 @@
 /dev/block/platform/msm_sdcc.3/by-num/p23         /mpt         ext4    nosuid,nodev,barrier=1                       wait,check
 
 # External SD
-/devices/platform/msm_sdcc.1/mmc_host/mmc1       /storage/sdcard1 vfat defaults                                wait,voldmanaged=sdcard:auto
+/devices/platform/msm_sdcc.1/mmc_host/mmc1       auto vfat defaults                                wait,voldmanaged=sdcard1:auto
 
