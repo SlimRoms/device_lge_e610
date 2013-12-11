@@ -439,8 +439,17 @@ gr_pixel *gr_fb_data(void)
 void gr_fb_blank(bool blank)
 {
     int ret;
+    int fd;
 
     ret = ioctl(gr_fb_fd, FBIOBLANK, blank ? FB_BLANK_POWERDOWN : FB_BLANK_UNBLANK);
     if (ret < 0)
         perror("ioctl(): blank");
+
+    fd = open("/sys/class/leds/button-backlight/brightness", O_RDWR);
+    if (fd < 0) {
+        perror("cannot open btn backlight");
+        return -1;
+    }
+    write(fd, blank ? "000": "120", 3);
+    close(fd);
 }
