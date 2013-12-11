@@ -2,9 +2,8 @@
 $(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Boot animation
-
-TARGET_BOOTANIMATION_NAME := 480
-
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 320
 
 # Inherit some common slim stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
