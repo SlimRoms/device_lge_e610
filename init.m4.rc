@@ -3,6 +3,8 @@ import init.lge-shared.rc
 on fs
     mount_all fstab.m4
 
+    swapon_all fstab.m4
+
 on early-boot
  # LGE_CHANGE_S  : ATCMD_GKPD 2011-12-28,[myunghwan.kim@lge.com]
  # M4 device event permission has been changed 
@@ -43,6 +45,8 @@ on boot
     chown system system /sys/class/input/input3/eeprom_writing
     chown system system /sys/class/input/input3/softreset
     chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
+
+    write /proc/sys/vm/page-cluster 0
 
 # Proxi sensor //eee3114.lee@lge.com
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
