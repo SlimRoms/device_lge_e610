@@ -52,10 +52,6 @@ on boot
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
     chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
 
-service sensord /system/bin/sensord  
-    class late_start
-        oneshot 
-
 ## Power profiles (CM QS tile)
 
 # Powersave
