@@ -51,23 +51,3 @@ on boot
 # Proxi sensor //eee3114.lee@lge.com
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
     chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
-
-## Power profiles (CM QS tile)
-
-# Powersave
-on property:sys.perf.profile=0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "conservative"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "800000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "122880"
-
-# Balanced
-on property:sys.perf.profile=1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "smartassH3"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "800000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "245760"
-
-# High performance
-on property:sys.perf.profile=2
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "smartass"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "800000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "320000"
